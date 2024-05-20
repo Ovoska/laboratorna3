@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaboratornaPizza</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+        input, select, textarea {
+            width: calc(100% - 22px); /* Adjusting for padding and border */
+            padding: 5px;
+            margin: 5px 0;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .submit-btn {
+            text-align: center;
+        }
+        .submit-btn button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        th {
+            text-align: center;
+            font-size: 1.2em;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th colspan="2">LabPizza</th>
+            </tr>
+            <tr>
+                <td>Ім'я</td>
+                <td><input type="text" name="name" placeholder="Введіть ваше ім'я" required></td>
+            </tr>
+            <tr>
+                <td>Начинка для піци</td>
+                <td>
+                    <input type="radio" name="topping" value="Supreme" required> Супрім<br>
+                    <input type="radio" name="topping" value="Vegetarian" required> Вегетаріанська<br>
+                    <input type="radio" name="topping" value="Hawaiian" required> Гавайська
+                </td>
+            </tr>
+            <tr>
+                <td>Соус для піци</td>
+                <td>
+                    <select name="sauce" required>
+                        <option value="Tomato">Томатний</option>
+                        <option value="BBQ">BBQ</option>
+                        <option value="Garlic">Часниковий</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Додаткові опції</td>
+                <td>
+                    <input type="checkbox" name="extras" value="Extra Cheese"> Додатковий сир<br>
+                    <input type="checkbox" name="extras" value="Gluten Free Base"> Безглютенова основа
+                </td>
+            </tr>
+            <tr>
+                <td>Інструкції для доставки:</td>
+                <td><textarea name="instructions" rows="4" placeholder="Введіть особливі інструкції тут..."></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" class="submit-btn"><button type="submit">Відправити замовлення</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
